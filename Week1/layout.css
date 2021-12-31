@@ -40,42 +40,45 @@
 .content{
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     margin:auto;
     width: 1200px;
     flex-wrap:wrap;
     
 }
+.para{
+    display: flex;
+    justify-content: center;
+    width: 600px;
+}
 
 .site{
     flex:none;
-    width:280;margin: 10px;;
-    background-color: rgb(135, 185, 226);
+    width:280;margin:6px;
+    justify-content: center;
     text-align: center;
+    background-color: rgb(135, 185, 226);
 
 }
 
 .picture img{
     width: 280px;
     height: 200px;
+    margin: 0px;
 }
 
 
     
 @media (max-width:1200px){
     .content{flex-wrap:wrap; width:100%;}
-    .site{width:45%;}
-    .picture img{ width: 100%;
-    }
-   
-    
+    .para{flex-wrap: wrap;width:100%;} 
 }
 
 @media (max-width:600px){
     .text{
         font-size: 30px;
     }
-    .site{width:90%}
+    .para{width:90%;}
     .item{
         display:none;
     }
