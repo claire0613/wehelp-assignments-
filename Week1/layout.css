@@ -62,7 +62,7 @@
 
     
 @media (max-width:1200px){
-    .content{flex-wrap:wrap; width:90%;}
+    .content{flex-wrap:wrap; width:100%;}
     .site{width:45%;}
     .picture img{ width: 100%;
     }
