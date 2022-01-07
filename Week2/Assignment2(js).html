@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment2(js)</title>
+</head>
+<body>
+    <script>
+
+        function calculation(min,max){
+            sum=0
+            for (let i=min;i<=max;i++)
+             {
+                    sum+=i    
+            }
+            console.log(sum)
+        }
+        calculation(1,3)
+        calculation(4,8)
+
+        function avg(data){
+            sum=0
+            for (let i=0;i<data.count;i++){
+                sum+=data.employees[i].salary   
+            }
+            console.log(sum/data.count) 
+        }
+        
+        avg({
+        "count":3,
+        "employees":[{"name":"John","salary":30000},
+        {"name":"Bob","salary":60000},
+        {"name":"Jenny","salary":50000}
+        ]
+        })
+        function maxProduct(nums){
+            let max=0
+            for (i=0;i<nums.length;i++){
+                n1=nums[i]
+                let new_nums=nums.slice(0)
+                new_nums.splice(i,1)
+                for (j=0;j<new_nums.length;j++){
+                    n2=new_nums[j]
+                    multi=n1*n2
+                    if(multi>max){
+                        max=multi;
+                    }else if(nums.length===2){
+                        max=multi;
+                    }
+                }
+            }
+            console.log(max)
+        } 
+        maxProduct([5, 20, 2, 6]) 
+        maxProduct([10, -20, 0, 3])
+        maxProduct([-1, 2]) 
+        maxProduct([-1, 0, 2]) 
+        maxProduct([-1, -2, 0]) 
+
+        function twoSum(nums, target){
+            let table={};
+	        for(let i=0;i<nums.length;i++){
+	            table[nums[i]]=i;
+            }
+            for (j=0;j<nums.length;j++){
+                let value=target-nums[j];
+                if(value in table&&j!=table[value]){
+                    return [j,table[value]]
+                }
+            }
+           
+            
+        }
+    
+        let result=twoSum([2, 11, 7, 15], 9);
+        console.log(result); // show [0, 2] because nums[0]+nums[2] is 9
+        function maxZeros(nums){
+            let length=0
+            let long_length=0
+                for (i=0;i<nums.length;i++){
+                    if (nums[i]===0){
+                        length+=1;
+                        if(length>long_length){
+                            long_length=length;
+                        }
+                    }else{
+                        length=0;
+                    }
+                }
+                console.log(long_length)
+
+
+                }
+        maxZeros([0, 1, 0, 0]); // 得到 2
+        maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0]); // 得到 4
+        maxZeros([1, 1, 1, 1, 1]); // 得到 0
+        maxZeros([0, 0, 0, 1, 1]) // 得到 3
+
+
+
+
+
+
+    </script>
+        
+  
+</body>
+</html>
