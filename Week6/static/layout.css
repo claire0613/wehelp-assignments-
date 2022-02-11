@@ -1,0 +1,23 @@
+h1{
+    color: white;
+    background-color: rgb(2, 51, 66);
+    text-align: center;
+    height: 300;
+    margin: 0px;
+
+}
+p{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+form{
+    text-align: center;
+}
+.login{
+    font-size: 30px;
+    text-align: center;
+}
+.item{
+    padding:2px
+}
