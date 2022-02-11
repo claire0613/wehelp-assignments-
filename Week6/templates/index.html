@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}歡迎{% endblock %}
+{% block h1 %}
+<h1>歡迎光臨，請註冊登入系統</h1>
+{% endblock %}
+{% block content %}
+<p>註冊帳號</p>
+<form action="{{ url_for('signup')}}" method="POST">
+    <div class="item">
+        姓名 <input type="text" name="name" /></div>
+    <div class="item">
+        帳號 <input type="text" name="username" /></div>
+    <div class="item">
+        密碼 <input type="password" name="password" /></div>
+    <div class="item"><button>註冊</button></div>
+</form>
+<p>登入系統</p>
+<form action="{{ url_for('signin')}}" method="POST">
+    <div class="item">
+        帳號 <input type="text" name="username" /></div>
+    <div class="item">
+        密碼 <input type="password" name="password" /></div>
+    <div class="item"><button>登入</button></div>
+</form>
+{% endblock %}
