@@ -1,0 +1,51 @@
+h1 {
+    color: white;
+    background-color: rgb(2, 51, 66);
+    text-align: center;
+    height: 400;
+    margin: 0px;
+    padding: 20px;
+
+}
+
+p {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0px;
+}
+
+form {
+    text-align: center;
+}
+
+.login {
+    font-size: 30px;
+    text-align: center;
+}
+
+.item {
+    padding: 2px
+}
+
+.search {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+
+.searchResult {
+    text-align: center;
+}
+
+.update {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.updateResult {
+    text-align: center;
+}
