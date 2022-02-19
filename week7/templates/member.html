@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{% block title %}member{% endblock %}
+{% block h1 %}
+<h1>歡迎光臨，這是會員頁</h1>
+{% endblock %}
+{% block content %}
+<div class="login">{{data}}，歡迎登入系統</div>
+<div class="login">
+    <a href="/signout">登出系統</a>
+</div>
+<br /><br /><br />
+<p>查詢會員姓名</p>
+<div class="search">
+    <input type="text" id="inputSearch" placeholder="請輸入查詢帳號" /> <button onclick="searchData()">查詢</button></div>
+</div>
+<div class="searchResult"></div>
+<br /><br /><br />
+<p>更新我的姓名</p>
+<div class="update">
+    <input type="text" id="updatename" placeholder="新的姓名" /> <button onclick="updateData()">修改</button></div>
+</div>
+<br />
+<div class="updateResult"></div>
+{% endblock %}
